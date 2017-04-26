@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: petclinic
+spec:
+  selector:
+    app: petclinic
+  ports:
+    - protocol: TCP
+      port: 8018
+      targetPort: 8080
+  type: NodePort
