@@ -15,5 +15,10 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: petclinic
+        - name: MYSQL_DATABASE
+          valueFrom: 
+            configMapKeyRef:
+              name: course
+              key: database
         ports:
         - containerPort: 3306
